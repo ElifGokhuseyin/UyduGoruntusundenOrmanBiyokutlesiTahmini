@@ -1,0 +1,4 @@
+# ESLint configuration
+node_modules
+dist
+build
