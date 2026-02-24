@@ -8,15 +8,20 @@ A professional web application for forest biomass estimation from satellite imag
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688)
 
 ## Features
+- Multi-temporal Sentinel-1 and Sentinel-2 satellite imagery processing (12-month time series)
+- Above-Ground Biomass (AGBM) estimation using LiDAR-calibrated ground truth data
+- Deep learning-based regression framework for biomass prediction
+- Comparative analysis of two backbone architectures: MobileNetV3-Large and EfficientNet-B5
+- UNet-style encoder–decoder architecture for spatial prediction
+- Multi-band (15-channel) geospatial data preprocessing and normalization
+- Model training with advanced optimization strategies (AdamW, learning rate scheduling, mixed precision)
+- Comprehensive performance evaluation using RMSE, MAE, R², and correlation metrics
+- Experimental subset analysis to evaluate scalability and generalization performance
+- Web-based visualization interface for prediction and ground-truth comparison
+- REST API-based inference pipeline with GeoTIFF input support
+- Full-stack implementation with FastAPI backend and React frontend
 
-- 🛰️ **Multi-temporal Satellite Imagery Processing**: 12 months of Sentinel-1 and Sentinel-2 data
-- 🧠 **Dual Model Comparison**: MobileNetV3-Large vs EfficientNet-B5
-- 📊 **Interactive Visualizations**: Heatmaps, metrics charts, and statistics
-- 📥 **File Upload**: Drag-and-drop TIFF file support
-- 🎯 **Comprehensive Metrics**: RMSE, MAE, R², Pearson correlation
-- 🌙 **Dark/Light Mode**: Modern UI with glassmorphism effects
-- 📱 **Responsive Design**: Mobile-friendly interface
-
+  
 ## Project Structure
 
 ```
@@ -47,7 +52,11 @@ elif-website/
 
 ### Backend Setup
 
-1. Create a virtual environment:
+1. Download the required files from this link:
+   https://drive.google.com/file/d/10kagONU6nyuVe_VD1HK3-uxP8-DYzHUq/view?usp=drive_link
+   (İçindeki 3 klasörü elif-website klasörü içine yükleyiniz.)
+
+3. Create a virtual environment:
 ```bash
 cd backend
 python -m venv venv
@@ -55,12 +64,12 @@ venv\Scripts\activate  # Windows
 source venv/bin/activate  # Linux/Mac
 ```
 
-2. Install dependencies:
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Start the API server:
+4. Start the API server:
 ```bash
 python app.py
 # Or use uvicorn:
